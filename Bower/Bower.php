@@ -224,8 +224,6 @@ class Bower
         $this->eventDispatcher->dispatch(BowerEvents::PRE_EXEC, $event);
         $config = $event->getConfiguration();
 
-        $this->dumpBowerConfig($config);
-
         $pb = $this->getProcessBuilder();
         $pb->setWorkingDirectory($config->getDirectory());
         $pb->setTimeout(600);
